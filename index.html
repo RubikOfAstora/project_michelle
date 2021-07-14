@@ -1,77 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="text/javascript" src="script.js"></script>
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Feedbackformular</title>
   <link rel="icon" type="image/png" sizes="32x32" href="bilder/logo2.png">
   <link href="https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 </head>
-<body class="indexbody">
+<body>
   <header>
-    <div class="flex"
-      <h1>Feedback zum Tauchkurs "Water Perspective"</h1>
-      <img src="bilder/logo.png" width="5%" length= "5%" alt="Logo">
+    <div class="flex">
+      <h1>Anmeldung zum Tauchkurs "Water Perspective"</h1>
+      <img src="bilder/logo.png" width="10%" alt="Logo">
     </div>
   </header>
   <main>
-    <div class="error">
-      <form>
-        <p>
+
+
+    <div class="container">
+      <form class="form" id="formular">
+        <!-- Ansprache -->
+        <div class="form-control">
+        <label>
           Ansprache
-          <select name="ansprache">
+          <select name="ansprache" id="ansprache">
           <option value="val2" selected>Andere</option>
           <option value="val3" selected>Herr</option>
           <option value="val1">Frau</option>
           </select>
-        </p>
-        <p>
-          Vorname
-          <br>
-          <input type="text" name="name" size="30" maxlength="40">
-        </p>
-        <p>
-          Nachname
-          <br>
-          <input type="text" name="name" size="30" maxlength="40">
-          </p>
-        <p>
-          E-Mail Adresse
-          <br>
-          <input type="text" name="email" size="30" maxlength="40">
-        </p>
+          <small>Fehlermeldung</small>
+        </label>
+        </div>
         <br>
-        <p>
-          Welchen Kurs wollen Sie besuchen?
-          <br>
-          <br>
-          <input type="radio" name="room" value="ja">Anfängerkurs
-          <br>
-          <input type="radio" name="room" value="nein">Kurs für Fortgeschrittene
-          <br>
-          <input type="radio" name="room" value="nein">Kurs für Experten
-        <br>
+<br>
 
-        <p>
-        Ich bin einverstanden, dass meine Daten für zwei Jahre gespeichert und nicht mit Dritten geteilt werden.
-        <br>
-          <input type="checkbox" name="extra" id="c1" value="agb">
-          <label for="c1"> </label>
-        </p>
+        <!-- VORNAME -->
+        <div class="form-control">
+          <label for="vorname">Vorname</label>
+          <br>
+          <input id= vorname type="text" name="vorname" size="30" maxlength="40"/>
+          <small>Fehlermeldung</small>
+        </div>
 
 
 
+        <!-- NACHNAME -->
         <br>
-          <div class="btns">
-            <input type="text" name="gotcha" value="" style="display:none;">
-            <input type="submit" value="Absenden">
-          </div>
-        </form>
-      </div>
+        <div class="form-control">
+        <label for="nachname">Nachname</label>
+          <br>
+          <input type="text" name="nachname" id="nachname" size="30" maxlength="40"/>
+          <small>Fehlermeldung</small>
+        </div>
+
+
+        <!-- EMAIL -->
+        <br>
+        <div class="form-control">
+        <label for="email">E-Mail Adresse</label>
+          <br>
+          <input type="text" name="email" id="email" size="30" maxlength="40"/>
+          <small>Fehlermeldung</small>
+        </div>
+        <br>
+
+        <!-- PASSWORT -->
+        <div class="form-control">
+          <label for="password">Passwort</label>
+          <br>
+          <input type="password" name="password" id="password" size="30" maxlength="40"/>
+          <small>Fehlermeldung</small>
+        </div>
+
+<br>
+
+        <!-- CHECKBOX -->
+        <div class="form-control" id="form-control">
+          <label for=checkbox> </label>
+          <input type="checkbox" name="accept" id="checkbox" value="agb"/>
+          Ich bin einverstanden, dass meine Daten für zwei Jahre gespeichert und nicht mit Dritten geteilt werden.
+        </div>
+        <br>
+<br>
+        <!-- BUTTON -->
+        <button class="btn" id="submit" type="submit">Absenden</button>
+      </form>
+
+
+    </div>
     </main>
     <footer>
 
     </footer>
+
+  <script src="validation.js"></script>
   </body>
 </html>
